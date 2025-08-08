@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Registration - Japheth Igbinovia</title>
+  <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+  <script defer src="product-form.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Register a Product</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="honesty.html">Honesty</a>
+      <a href="product_register.html">Register Product</a>
+      <a href="reflection.html">Reflection</a>
+    </nav>
+  </header>
+
+  <main>
+    <form name="signup" id="signup" action="https://httpbin.org/post" method="post">
+      <label>Product ID:
+        <input type="text" id="productId" name="productId" pattern="P\d{3}" required>
+      </label>
+
+      <label>Product Description:
+        <textarea id="description" name="description" required></textarea>
+      </label>
+
+      <label>Price:
+        <input type="number" id="price" name="price" step="0.01" min="0" required>
+      </label>
+
+      <label>Supplier Username:
+        <input type="text" id="username" name="username" minlength="5" required>
+      </label>
+
+      <fieldset>
+        <legend>Supplier Status (Select at least one):</legend>
+        <label><input type="checkbox" name="status" value="New Supplier"> New Supplier</label>
+        <label><input type="checkbox" name="status" value="Contract Signed"> Contract Signed</label>
+        <label><input type="checkbox" name="status" value="Quality Tested"> Quality Tested</label>
+      </fieldset>
+
+      <label>Supplier Email:
+        <input type="email" name="email" id="email" required>
+      </label>
+
+      <!-- Hidden Fields -->
+      <input type="hidden" name="FullName" id="FullName" value="Japheth Igbinovia" />
+      <input type="hidden" name="studentId" id="studentId" value="122192182" />
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <aside id="errorPanel" style="color: red; margin-top: 1em;"></aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Japheth Igbinovia</p>
+    <p><a href="https://github.com/Japhy98/WEB222-Assignment-5-HTML-files">GitHub Repo for A5</a></p>
+  </footer>
+</body>
+</html>
